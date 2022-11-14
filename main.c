@@ -29,6 +29,7 @@ void clean()
 
 int main()
 {
+    init();
     int create_socket, new_socket;
     socklen_t addrlen;
     int bufsize = 1024;
@@ -75,5 +76,6 @@ int main()
         close(new_socket);
     }
     close(create_socket);
+    clean();
     return 0;
 }
